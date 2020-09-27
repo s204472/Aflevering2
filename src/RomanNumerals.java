@@ -27,7 +27,6 @@ public class RomanNumerals{
         try {
         	num = input.nextInt();
         	if (num > 0 && num <= 3000) {
-        		input.close();
             	return num;
         	} else {
 				System.out.println("Wrong input, try again");
