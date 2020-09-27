@@ -4,7 +4,6 @@ public class RomanNumerals{
     public static void main(String[] args){
         int[] values = {1,4,5,9,10,40,50,90,100,400,500,900,1000};
         String[] romanNumerals = {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
-        //Scanner input = new Scanner(System.in);
         int num = getInput();
         String output = "";
         int quantity;
@@ -31,13 +30,13 @@ public class RomanNumerals{
         		input.close();
             	return num;
         	} else {
-        		System.out.println("Wrong input, try again");
+				System.out.println("Wrong input, try again");
             	return getInput();
         	}
         }
         catch(Exception e) {
-        	System.out.println("Wrong input, try again");
+			System.out.println("Wrong input, try again");
         	return getInput();
-        }
+		}
     }
 }
