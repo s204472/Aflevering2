@@ -1,0 +1,23 @@
+public static final int lineDist = 2
+public static final int NEEDLE_END = 1
+
+// ET KAST
+int throws = 200;
+int hits = 0;
+int needleStart;
+int angle;
+int needleEnd;
+
+
+for (int i = 0; i < throws; i ++){
+    needleStart = 0..2
+        angle = 0..360
+        needleEnd = math.cos(angle)*needleLen + needlestart.
+    if(needleEnd <= 0 || needleEnd >= 2){
+        
+
+    }
+}
+
+
+
