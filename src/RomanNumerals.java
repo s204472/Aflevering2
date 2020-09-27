@@ -25,6 +25,7 @@ public class RomanNumerals{
     	Scanner input = new Scanner(System.in);
     	int num = 0;
         try {
+			System.out.print("Enter a number between 1 and 3000: ");
         	num = input.nextInt();
         	if (num > 0 && num <= 3000) {
             	return num;
