@@ -1,6 +1,10 @@
 import java.util.Scanner;
 
 public class Palindrome {
+    /*
+     * This program takes a user input, and manipulates the string, into a comparable string format.
+     * It checks whether the input is a palindrome and returns a message for the user.
+     */
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter line to check: ");
@@ -18,6 +22,9 @@ public class Palindrome {
         }
     }
 
+    /*
+     * This method checks the input, by looping over half the length of the input, comparing the x letter with the length-x letter..
+     */
     public static Boolean checkPalindrome(String input){
         int len = input.length();
         for (int i = 0; i < (len - 1) / 2; i++){
