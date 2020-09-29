@@ -1,4 +1,3 @@
-import java.lang.reflect.AnnotatedArrayType;
 import java.util.Scanner;
 
 public class Palindrome {
@@ -28,7 +27,6 @@ public class Palindrome {
         }
         return true;
     }
-
 }
 
 
