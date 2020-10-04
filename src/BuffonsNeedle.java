@@ -28,31 +28,37 @@ public class BuffonsNeedle {
 				hits++;
 			}
 		}
-		double ratio = drops / hits;
-		System.out.print(drops + " / " + hits + " = " + ratio);
+		if (hits > 0) {
+			double ratio = drops / hits;
+			System.out.print(drops + " / " + hits + " = " + ratio);
+		} else {
+			System.out.println("No hits, was registered. Ratio can't be calculated.");
+		}
+		
 
 	}
 
 	/*
 	 * This method asks the user for an input.
-	 * It handles wrong inputs, using a try-catch block, and if statements 
+	 * It handles wrong inputs, using while-loops, the hasNextInt scanner function and if statements.
 	 */
-	public static int getInput() {
-		Scanner input = new Scanner(System.in);
-		int num = 0;
-		try {
-			System.out.print("Enter number of iterations: ");
+    public static int getInput() {
+    	Scanner input = new Scanner(System.in);
+		int num = 0; 
+		System.out.print("Enter number of iterations: ");
+		while(true){
+			while (!input.hasNextInt()){
+				input.next();
+				System.out.println("Wrong input, try again");
+			}
 			num = input.nextInt();
 			if (num > 0) {
 				return num;
 			} else {
 				System.out.println("Wrong input, try again");
-				return getInput();
 			}
-		} catch (Exception e) {
-			System.out.println("Wrong input, try again");
-			return getInput();
 		}
-	}
+    }
+
 
 }

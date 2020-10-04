@@ -14,7 +14,7 @@ public class RomanNumerals{
         int quantity;
         int remaining;
         
-        for(int i = romanNumerals.length; i > 0; i--) {
+        for(int i = romanNumerals.length - 1; i > 0; i--) {
         	if (num / values[i]>0) {
         		quantity = num / values[i];
         		remaining = num % values[i];
@@ -29,24 +29,23 @@ public class RomanNumerals{
 	
 	/*
 	 * This method asks the user for an input.
-	 * It handles wrong inputs, using a try-catch block, and if statements 
+	 * It handles wrong inputs, using while-loops, the hasNextInt scanner function and if statements.
 	 */
     public static int getInput() {
     	Scanner input = new Scanner(System.in);
-    	int num = 0;
-        try {
-			System.out.print("Enter a number between 1 and 3000: ");
-        	num = input.nextInt();
-        	if (num > 0 && num <= 3000) {
-            	return num;
-        	} else {
+		int num = 0; 
+		System.out.print("Enter a number between 1 and 3000: ");
+		while(true){
+			while (!input.hasNextInt()){
+				input.next();
 				System.out.println("Wrong input, try again");
-            	return getInput();
-        	}
-        }
-        catch(Exception e) {
-			System.out.println("Wrong input, try again");
-        	return getInput();
+			}
+			num = input.nextInt();
+			if (num > 0 && num <= 3000) {
+				return num;
+			} else {
+				System.out.println("Wrong input, try again");
+			}
 		}
     }
 }
